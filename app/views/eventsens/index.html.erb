@@ -1,0 +1,31 @@
+<h1>Listing eventsens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>City</th>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eventsens.each do |eventsen| %>
+      <tr>
+        <td><%= eventsen.event %></td>
+        <td><%= eventsen.city %></td>
+        <td><%= eventsen.number %></td>
+        <td><%= link_to 'Show', eventsen %></td>
+        <td><%= link_to 'Edit', edit_eventsen_path(eventsen) %></td>
+        <td><%= link_to 'Destroy', eventsen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eventsen', new_eventsen_path %>

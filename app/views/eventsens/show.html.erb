@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @eventsen.event %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @eventsen.city %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @eventsen.number %>
+</p>
+
+<%= link_to 'Edit', edit_eventsen_path(@eventsen) %> |
+<%= link_to 'Back', eventsens_path %>
